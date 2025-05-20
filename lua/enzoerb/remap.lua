@@ -41,8 +41,8 @@ vim.keymap.set("n", "<leader>pl", [[ciw[<C-r>"](<C-r>+)<Esc>]])
 vim.keymap.set("v", "<leader>pl", [[c[<C-r>"](<C-r>+)<Esc>]])
 
 -- search vimwiki tags
-vim.keymap.set("n", "<leader>sw", [[:Rg :: ~/vimwiki/<C-Left><Left><Left>]])
-vim.keymap.set("n", "<leader>sd", [[:Rg :: ~/vimwiki/diary/<C-Left><Left><Left>]])
+vim.keymap.set("n", "<leader>gww", [[:Rg :: ~/vimwiki/<C-Left><Left><Left>]])
+vim.keymap.set("n", "<leader>gwi", [[:Rg :: ~/vimwiki/diary/<C-Left><Left><Left>]])
 
 -- make current file executable
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
