@@ -13,7 +13,7 @@ require('packer').startup(function(use)
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
 
-  use { 'rrethy/vim-hexokinase', run = 'make hexokinase' }
+  -- use { 'rrethy/vim-hexokinase', run = 'make hexokinase' }
 
   -- Commenting plugin
   use('tpope/vim-commentary')
