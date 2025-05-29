@@ -1,10 +1,10 @@
 vim.g.mapleader = " "
 
 -- Explore
-vim.keymap.set('n', '<Leader>pv', vim.cmd.Ex)
+vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
 
 -- Comment Lines
-vim.keymap.set('n', '<Leader>cl', ':Commentary<CR>')
+vim.keymap.set('n', '<leader>cl', ':Commentary<CR>')
 
 -- Easy navigation
 -- vim.keymap.set('n', '<A-Left>', 'b', { desc = 'Move to previous word' })
@@ -35,14 +35,18 @@ vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 -- replace master
 vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set("n", "<leader>ra", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("v", "<leader>q", [[:norm<Space>@]])
 
 -- Hyperlink Paste
 vim.keymap.set("n", "<leader>pl", [[ciw[<C-r>"](<C-r>+)<Esc>]])
 vim.keymap.set("v", "<leader>pl", [[c[<C-r>"](<C-r>+)<Esc>]])
 
 -- search vimwiki tags
-vim.keymap.set("n", "<leader>gww", [[:Rg :: ~/vimwiki/<C-Left><Left><Left>]])
-vim.keymap.set("n", "<leader>gwi", [[:Rg :: ~/vimwiki/diary/<C-Left><Left><Left>]])
+vim.keymap.set("n", "<leader>rww", [[:Rg :: ~/vimwiki/<C-Left><Left><Left>]])
+vim.keymap.set("n", "<leader>rwi", [[:Rg :: ~/vimwiki/diary/<C-Left><Left><Left>]])
+
+-- vimwiki utilities
+vim.keymap.set('n', '<leader>wt', ':VimwikiTable<CR>')
 
 -- make current file executable
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
