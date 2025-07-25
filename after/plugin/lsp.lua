@@ -37,7 +37,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'lua_ls', 'rust_analyzer', 'pyright', 'elixirls', 'ts_ls'},
+  ensure_installed = {'kotlin_lsp', 'lua_ls', 'rust_analyzer', 'pyright', 'elixirls', 'ts_ls'},
   handlers = {
     function(server_name)
       require('lspconfig')[server_name].setup({})
